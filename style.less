@@ -1,0 +1,73 @@
+// out: style.css, compress: true, strictMath: true, sourceMap: true
+
+* {
+    box-sizing: border-box;
+}
+
+// VARIABLES
+
+// COLORS
+@color-light-blue: #a7dce2;
+@color-yellow: #dfe11c;
+@color-blue: #115dcd;
+@color-pink: #f6dce0;
+@color-white: #ececec;
+@color-black: #1d2321;
+@color-green: #00e1ac;
+
+// ALIGN
+@center: auto;
+@padding-25: 25px;
+
+
+body {
+    margin: 0;
+    color: @color-black;
+}
+
+main, nav, header {
+    margin: @center;
+    width: 90vw;
+}
+
+.portfolio {
+    transform: rotate(90deg);
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;    
+    padding: @padding-25;
+    background-color: @color-white;
+    z-index: -1;
+}
+
+
+    
+h2 {
+    margin-bottom: -10px;
+}
+
+
+.photo-profile {
+    position: relative;
+    
+     span {
+        position: absolute;
+        width: 180px;
+        height: 180px;
+        border: 1px solid @color-yellow;
+        left: -10px;
+        bottom: -5px;
+        z-index: 2;
+    }
+    
+    img {
+        width: 180px;
+        height: 180px;
+        z-index: 4;
+    }   
+   
+}
+
