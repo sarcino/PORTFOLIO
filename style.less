@@ -1,17 +1,18 @@
 // out: style.css, compress: true, strictMath: true, sourceMap: true
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 // VARIABLES
 // COLORS
-@white: #f3f3f4;
+@white: #ffffff;
 @black: #1d2321;
 @grey: #7e7f83;
 @purple: #9f64d8;
 @blue: #6a2ecd;
 @light-blue: rgba(194,241,255, 0.8);
-@pink: #ff87ab;
 
 
 // ALIGNMENT
@@ -109,9 +110,45 @@ nav ul {
     }
 }
 
+.portfolio {
+    max-width: @width;
+    margin: @centered;
+    display: flex;
+    justify-content: space-around;    
+    
+    column-1, column-2 {
+        display: flex;
+        flex-direction: column;
+        
+        figure {
+            flex-basis: 50%;
+        }
+
+    }
+    
+}
+
+img {
+    max-width: 480px;
+    height: auto;
+}
+
 ::selection {
-    background-color: @grey;
-    color: @white;
+    background-color: @light-blue;
+}
+
+footer {
+    background-color: @blue;
+    color: @white;    
+    margin: 0px;
+    padding: 0px;
+    max-width: 100vw;
+    height: 100vh;
+    text-align: center;
+    
+    p {
+        vertical-align: middle;
+    }
 }
 
 
