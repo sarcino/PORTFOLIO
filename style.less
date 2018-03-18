@@ -10,7 +10,7 @@
 @grey: #7e7f83;
 @purple: #9f64d8;
 @blue: #6a2ecd;
-@light-blue: #c2f1ff;
+@light-blue: rgba(194,241,255, 0.8);
 @pink: #ff87ab;
 
 
@@ -64,7 +64,7 @@ nav ul {
         bottom: 0.5px;
         left: 0;
         z-index: -1;
-        background-color: rgba(194,241,255, 0.8);
+        background-color: @light-blue;
         visibility: hidden;
         -webkit-transform: scaleX(0);
         transform: scaleX(0);
@@ -110,7 +110,8 @@ nav ul {
 }
 
 ::selection {
-    background-color: @pink;
+    background-color: @grey;
+    color: @white;
 }
 
 
