@@ -1,69 +1,93 @@
 // out: style.css, compress: true, strictMath: true, sourceMap: true
-
 * {
     box-sizing: border-box;
 }
 
 // VARIABLES
-
 // COLORS
-@color-white: #ececec;
-@color-black: #1d2321;
+@white: #f3f3f4;
+@black: #1d2321;
+@grey: #7e7f83;
+@purple: #9f64d8;
+@blue: #6a2ecd;
 
 
-// FONT
-@font: "museo-sans", sans-serif;
+
+
+
+
+
+// ALIGNMENT
+@width: 1000px;
+@centered: 0 auto;
+
 
 
 body {
-    margin: 0;
-    color: @color-black;
     font-family: "museo-sans", sans-serif;
+    font-size: 16px;
 }
 
-main, nav, header {
-    margin: @center;
-    width: 90vw;
+header {
+    margin-top: 5%;
 }
 
-.portfolio {
-    transform: rotate(90deg);
+nav {
+    max-width: @width;
+    margin: @centered;
 }
-.container {
+
+nav ul {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: flex-start;    
-    padding: @padding-25;
-    background-color: @color-white;
-    z-index: -1;
-}
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: flex-end;
+    margin-left: 5%;
 
-
-    
-h2 {
-    margin-bottom: -10px;
-}
-
-
-.photo-profile {
-    position: relative;
-    
-     span {
-        position: absolute;
-        width: 180px;
-        height: 180px;
-        border: 1px solid @color-yellow;
-        left: -10px;
-        bottom: -5px;
-        z-index: 2;
+    li:not(:first-child) {
+        margin-left: 30px;
     }
+
+    a {
+        color: @black;
+        font-weight: bold;
+        font-size: 1.2em;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        line-height: 1.8em;
+        text-decoration: none;
+        position: relative;
+    }
+
+    // UNDERLINE
     
-    img {
-        width: 180px;
-        height: 180px;
-        z-index: 4;
-    }   
-   
+    a:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 7px;
+        bottom: 0.5px;
+        left: 0;
+        background-color: rgba(106, 46, 205, 0.3);
+        visibility: hidden;
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0);
+        -webkit-transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
+        transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+
+    a:hover:before {
+        visibility: visible;
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+    }
+
 }
 
+p {
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: normal;
+    line-height: 25px;
+    text-transform: none;
+}
