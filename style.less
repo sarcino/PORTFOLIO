@@ -12,7 +12,7 @@
 @grey: #7e7f83;
 @purple: #9f64d8;
 @blue: #6a2ecd;
-@light-blue: rgba(194,241,255, 0.8);
+@light-blue: rgba(194, 241, 255, 0.8);
 
 
 // ALIGNMENT
@@ -96,14 +96,29 @@ nav ul {
     }
 
     .photo-profile {
-            img {
+        position: relative;
+        max-width: 150px;
+        margin: @centered;
+        
+        img {
             border-radius: 50%;
             max-width: 150px;
             height: auto;
-           
+        }
+
+        span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin-left: 2px;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;            
+            z-index: -2;
+            border: 2px solid @light-blue;
         }
     }
-    
+
     p {
         font-size: 1.1em;
         line-height: 1.5em;
@@ -114,18 +129,19 @@ nav ul {
     max-width: @width;
     margin: @centered;
     display: flex;
-    justify-content: space-around;    
-    
-    column-1, column-2 {
+    justify-content: space-around;
+
+    column-1,
+    column-2 {
         display: flex;
         flex-direction: column;
-        
+
         figure {
             flex-basis: 50%;
         }
 
     }
-    
+
 }
 
 img {
@@ -134,21 +150,20 @@ img {
 }
 
 ::selection {
-    background-color: @light-blue;
+    background-color: @black;
+    color: @white;
 }
 
 footer {
     background-color: @blue;
-    color: @white;    
+    color: @white;
     margin: 0px;
     padding: 0px;
     max-width: 100vw;
     height: 100vh;
     text-align: center;
-    
+
     p {
         vertical-align: middle;
     }
 }
-
-
