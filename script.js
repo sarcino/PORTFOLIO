@@ -1,6 +1,21 @@
 window.onload = function () {
-
     
+    // SMOOTH SCROLLING EFFECT
+    // APPLY TO ALL LINKS
+  $("a").on("click", function(event) {
+    // THIS MUST HAVE HASH
+    if (this.hash !== "") {
+      event.preventDefault();      
+      var hash = this.hash;
+      // ANIMATION
+      $("html,body").animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+        window.location.hash = hash;
+      });
+    }
+  });
+  
     
     
     
