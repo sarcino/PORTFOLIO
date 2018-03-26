@@ -22,8 +22,8 @@ window.onload = function () {
 
 
     $("figure").hover(function () {
-        $(".portfolio a").animate({
-            border: '1px solid black',
+        $(".portfolio > a").animate({
+            border: '1px solid #000',
         }, 500);
     });
 
