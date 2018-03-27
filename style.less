@@ -151,6 +151,10 @@ nav ul {
         figcaption {
             line-height: 1.7;
             font-size: 0.9rem;
+            
+            a {
+                position: relative;
+            }
         }
 
         a {
@@ -163,8 +167,20 @@ nav ul {
             transition: all 800ms cubic-bezier(0.075, 0.82, 0.165, 1);
         }
 
-        a:hover {
-            color: @grey;
+        figcaption a:after {
+            content: "";
+            display: block;
+            width: 0;
+            position: absolute;
+            margin-top: -4px;
+            border-bottom: 2px solid @black;
+            transition: width 500ms linear;
+        }
+        
+        // FIGURE:HOVER - A AFTER IN FIGCAPTION
+        
+        &:hover figcaption a:after {
+            width: 100%;
         }
 
     }
