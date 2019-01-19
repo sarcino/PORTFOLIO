@@ -28,10 +28,8 @@ window.onload = function () {
     });
 
 
-
-
-
-
+    var footerParaHeight = $("footer").height();
+    $(".content").css("margin-bottom", footerParaHeight);
 
 
 
