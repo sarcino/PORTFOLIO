@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 {% block content %}
-<div class="home">
+
     <section class="about">
         <div class="photo-profile">               
             <img src= "static/img/photo.jpg" alt="" />
@@ -19,5 +19,59 @@
         
         <a href="#portfolio" class="arrow-down"><img src="static/img/arrow-down.png" alt="Arrow down" /></a>
     </section>
-</div>
+    <section class="portfolio">
+            
+            <div class="column-1">
+                
+                <figure>
+                    <a href="https://sarcino.github.io/InstagramFeed/" target="_blank" aria-label="opens in a new window"><img src="static/img/instagram-feed.png" /></a>
+                    <figcaption><a href="https://sarcino.github.io/InstagramFeed/" target="_blank" aria-label="opens in a new window">Instagram Feed</a><br /> Instagram API, jQuery, AJAX, HTML5, CSS3</figcaption>
+                </figure>
+                
+                <figure>
+                   <a href="https://github.com/sarcino/photo-portfolio" target="_blank" aria-label="opens in a new window"><img src="static/img/photo-portfolio.jpg" /></a>
+                    <figcaption><a href="https://github.com/sarcino/photo-portfolio">Photo Portfolio</a><br />HTML5, CSS3, JS, SmartPhoto plugin</figcaption>
+                </figure>
+            </div>
+
+            <div class="column-2">
+                <figure>
+                    <a href="https://sarcino.github.io/prezidentske-volby/" target="_blank" aria-label="opens in a new window"><img src="static/img/volby-api-bw.jpg" /></a>
+                    <figcaption><a href="https://sarcino.github.io/prezidentske-volby/" target="_blank" aria-label="opens in a new window">Czech Presidential Election Data Visualisation</a><br />
+                        Regularly updated during the election Saturday<br />
+                        Open Data of The Czech Statistical Office, Ajax, XML, Plotly.js
+                    </figcaption>
+                </figure>
+
+                <figure>
+                    <a href="https://sarcino.github.io/product-page/" target="_blank" aria-label="opens in a new window"><img src="static/img/product-page.jpg" /></a>
+                    <figcaption><a href="https://sarcino.github.io/product-page/" target="_blank" aria-label="opens in a new window">Product Page</a><br />
+                        HTML5, CSS3, JavaScript
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        
+        <section id="contact" class="wrapper">
+
+            <h2>Get in touch</h2>
+            <p>Whether for a potential project or just to say hi,<br />I'll answer you!</p>
+            <p>
+                <a class="cv" aria-label="Open my CV in pdf" href="https://drive.google.com/file/d/1o1XD9q_h5FIzjKa0M9dC5nZC81G5lAZI/view?usp=sharing">Contact &amp; CV</a>
+            </p>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/sarkasevcikova/" aria-label="opens in new tab" target="_blank">LinkedIn</a></li>
+                <li><a href="https://github.com/sarcino" aria-label="opens in new tab" target="_blank">GitHub</a> </li>
+                <li><a href="https://www.freecodecamp.org/sarcino" aria-label="opens in new tab" target="_blank">freeCodeCamp</a></li>
+                <li><a href="https://www.instagram.com/sarcino/" aria-label="opens in new tab" target="_blank">Instagram</a></li>
+            </ul>
+            <img src="static/img/qrcode.svg" alt="QR code vcard">
+        </section>
+
+    </footer>
+
+
 {% endblock %}

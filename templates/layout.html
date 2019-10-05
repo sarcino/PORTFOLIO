@@ -16,8 +16,8 @@
     <header>
         <nav>
             <ul>
-                <li role="menuitem"><a href="{{ url_for('home') }}">My Work</a></li>
-                <li role="menuitem"><a href="{{ url_for('home') }}">Contact</a></li>
+                <li role="menuitem"><a href="{{ url_for('home', _anchor='portfolio') }}">My Work</a></li>
+                <li role="menuitem"><a href="{{ url_for('home', _anchor='contact') }}">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -28,10 +28,7 @@
             {% endblock %}
         </section>
 
-        <h2 id="portfolio">What I do</h2>
-<div class="portfolio">
-        
-    </div>
+
 
 
 
